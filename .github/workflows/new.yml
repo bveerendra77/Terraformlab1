@@ -1,0 +1,13 @@
+name: login
+on:
+  workflow_dispatch:
+ 
+jobs:
+  deploy_pgadmin_intm:
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: "Azure login"
+        uses: azure/login@v1.4.6
+        with:
+          creds: '{"clientId":"${{ secrets.ARM_CLIENT_ID }}","clientSecret":"${{ secrets.ARM_CLIENT_SECRET }}","subscriptionId":"${{ secrets.ARM_SUBSCRIPTION_ID }}","tenantId":"${{ secrets.ARM_TENANT_ID }}"}'
+      
