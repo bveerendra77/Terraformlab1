@@ -6,6 +6,8 @@ jobs:
   deploy_pgadmin_intm:
     runs-on: [ubuntu-latest]
     steps:
+      - name: "Install azure-cli"
+        uses: elstudio/action-install-azure-cli@v1
       - name: "Azure login"
         uses: azure/login@v1.4.6
         with:
