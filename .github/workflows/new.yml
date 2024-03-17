@@ -5,6 +5,7 @@ on:
 jobs:
   deploy_pgadmin_intm:
     runs-on: [ubuntu-latest]
+    environment: Test
     steps:
       - name: "Install azure-cli"
         uses: elstudio/action-install-azure-cli@v1
